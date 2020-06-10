@@ -1,8 +1,8 @@
 # satosa-oidc-to-saml
 
-This not-that-brief notes are the outcome of an effort to understand how to quickly set up a _Proof of Concept_ SATOSA proxy as a simple 
-OIDC to SAML 2.0 gateway for Research and Education Identity Federation. Please consider that the author is not in any way an _expert_ user
-of SATOSA and what follows _MUST NOT_ be used in production without modifications.
+This not-that-brief notes are the outcome of an effort to understand how to quickly set up a _Proof of Concept_ SATOSA proxy 
+as a simple OIDC to SAML 2.0 gateway for Research and Education Identity Federation. Please consider that the author is __not 
+an expert__ user of SATOSA and what follows __MUST NOT__ be used in production without modifications.
 
 References:
 * https://github.com/IdentityPython/SATOSA
