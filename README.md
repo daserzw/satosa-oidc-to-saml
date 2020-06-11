@@ -1,8 +1,9 @@
 # satosa-oidc-to-saml
 
-This not-that-brief notes are the outcome of an effort to understand how to quickly set up a _Proof of Concept_ SATOSA proxy as a simple 
-OIDC to SAML 2.0 gateway for Research and Education Identity Federation. Please consider that the author is not in any way an _expert_ user
-of SATOSA and what follows _MUST NOT_ be used in production without modifications.
+This _not-that-brief_ notes are the outcome of an effort to understand how to quickly set up a 
+__Proof of Concept__ SATOSA proxy as a simple OIDC to SAML 2.0 gateway for Research and Education 
+Identity Federation. Please consider that the author is __not an expert__ user of SATOSA and what 
+follows __MUST NOT__ be used in a production environment without modifications.
 
 References:
 * https://github.com/IdentityPython/SATOSA
@@ -123,16 +124,16 @@ find the expected filenames):
 The certificate and key pair for the HTTPS endpoints is better to be a certificate issued by a valid
 CA, otherwise you'll have a hard time even in a test environment.
 
-The other threes can be created in one run with the following command:
+The other three pairs can be created in one run with the following command:
 
 ```
-for ck in metadata frontend backend; do openssl req -newkey rsa:3072 -keyout /opt/satosa/etc/$i.key -nodes -out /opt/satosa/etc/$i.crt -subj /CN=PROXYS_FQDN; done 
+for ck in metadata frontend backend; do openssl req -newkey rsa:3072 -keyout /opt/satosa/etc/$ck.key -nodes -out /opt/satosa/etc/$ck.crt -subj /CN=PROXY_FQDN; done 
 ```
 
 ### Proxy configuration
 
 The main confguration file is `proxy_conf.yaml`. The example configuration is almost ready for 
-running the proxy with some modifications:
+running the proxy, with some modifications:
 
 - `BASE` should be set to the base URL of the proxy, as in:
  ```
@@ -159,7 +160,7 @@ The rest of the configuration file is good to go.
 ### SAML 2.0 backend 
 
 The next configuration file to set up is the `saml2_backend.yaml`, that configures the SAML 2.0
-Service Provider side of the proxy as well as creates the SP metadata that will be used to 
+Service Provider side of the proxy as well as being used to create the SP metadata needed to 
 register the SP in your SAML 2.0 identity federation (it can also be exchanged with just one IdP, 
 but that is out of the scope of this tutorial). 
 
