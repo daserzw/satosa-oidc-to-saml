@@ -301,6 +301,10 @@ Obviously `cdb.json` needs to be filled up with the correct values for your clie
 OIDC clients support the `code` response type, so you'll just need to set the client\_id, which is 
 the _key_ of the client entry (`"YOUR_CLIENT_ID"`), the `client_secret` and the `redirect_uris`.
 
+The OpenID Connect Provider `issuer` will default to the value of the `BASE` parameter that has 
+been set in `proxy_conf.yaml`, and the `openid-configuration` will be available at the canonical
+path `/.well-known/openid-configuration`.
+
 ### Run the proxy
 
 It's finally time to run the proxy, but before check that:
