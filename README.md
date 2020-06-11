@@ -10,7 +10,7 @@ References:
 * https://lists.sunet.se/pipermail/satosa-users/
 * https://lists.sunet.se/pipermail/satosa-dev/
 
-This notes are based on SATOSA version 6.1.0.
+This notes are based on SATOSA version 6.1.0 and has been tested on a Debian Buster dstribution.
 
 ## Architecture
 
