@@ -135,7 +135,7 @@ for ck in metadata frontend backend; do openssl req -newkey rsa:3072 -keyout /op
 The main confguration file is `proxy_conf.yaml`. The example configuration is almost ready for 
 running the proxy, with some modifications:
 
-- `BASE` should be set to the base URL of the proxy, as in:
+- `BASE` should be`information_url.text`, `privacy_statement_url.text` set to the base URL of the proxy, as in:
  ```
  BASE: https://FQDN
  ```
@@ -175,7 +175,7 @@ YMMV. To have a minimal working configuration:
  
 - insert the URL from where to download the aggregated metadata file of the identity federation 
   you wish to join and the certificate filename to verify the metadata signature, the path is 
-  relative to `/opt/satosa/etc` (do not forget to download the certificate):
+  relative to `/opt/satosa/etc` (do not forget to download the certificate).
  
  ```
      metadata:
@@ -183,7 +183,7 @@ YMMV. To have a minimal working configuration:
 	    - {url: http://md.idem.garr.it/metadata/idem-test-metadata-sha256.xml, cert: idem-signer-20220121.pem}
  ```
  
-- insert all the user interface information that will go into the metadata:
+- insert all the user interface information that will go into the metadata.:
 
  ```
      service:
