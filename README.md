@@ -1,8 +1,7 @@
 # README
 
 This notes are the outcome of an effort to understand how to quickly set up SATOSA proxies for
-publishing OIDC RPs in Research and Education Identity Federations as well as to bridge other
-authentication systems.
+publishing OIDC RPs in SAML 2.0 Research and Education Identity Federations as well as to bridge other authentication systems.
 
 References:
 * https://github.com/IdentityPython/SATOSA
