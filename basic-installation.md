@@ -87,5 +87,6 @@ CA, otherwise you'll have a hard time even in a test environment.
 The other three pairs can be created in one run with the following command:
 
 ```
-for ck in metadata frontend backend; do openssl req -new -newkey rsa:3072 -keyout /opt/satosa/etc/$ck.key -nodes -x509 -out /opt/satosa/etc/$ck.crt -subj /CN=PROXY_FQDN; done 
+cd /opt/satosa/etc
+for ck in metadata frontend backend; do openssl req -new -newkey rsa:3072 -keyout $ck.key -nodes -x509 -out $ck.crt -days 3650 -subj /CN=PROXY_FQDN; done 
 ```
